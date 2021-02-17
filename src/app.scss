@@ -156,6 +156,7 @@ header{
       i{
         color: $main-light-color;
         font-size: 10px;
+        margin-right: 4px;
       }
 
       .download-button{
@@ -163,6 +164,7 @@ header{
         padding: 0 8px;
         border: 2px solid $main-medium-color;
         font-size: 12px;
+        cursor: pointer;
 
         div{
           display: inline-block;
@@ -207,6 +209,7 @@ header{
       }
 
       .buy-button{
+        cursor: pointer;
         background: $icons-button-color;
         border: none;
         font-size: 12px;

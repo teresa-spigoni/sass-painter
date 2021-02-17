@@ -110,12 +110,14 @@ header .header-container-bottom .logo {
 .jumbotron-container .box-left i {
   color: #989898;
   font-size: 10px;
+  margin-right: 4px;
 }
 .jumbotron-container .box-left .download-button {
   margin-top: 30px;
   padding: 0 8px;
   border: 2px solid #333333;
   font-size: 12px;
+  cursor: pointer;
 }
 .jumbotron-container .box-left .download-button div {
   display: inline-block;
@@ -152,6 +154,7 @@ header .header-container-bottom .logo {
   right: 15px;
 }
 .jumbotron-container .box-right .buy-button {
+  cursor: pointer;
   background: #009cff;
   border: none;
   font-size: 12px;
