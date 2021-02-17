@@ -8,14 +8,17 @@ a {
   text-decoration: none;
 }
 
+body {
+  font-family: "Roboto", sans-serif;
+}
+
 header {
   width: 100%;
   height: 100px;
   background: #101010;
-  font-family: "Roboto", sans-serif;
 }
 header .header-container {
-  width: 1200px;
+  width: 1000px;
   height: 100%;
   margin: 0 auto;
 }
@@ -39,16 +42,125 @@ header .header-container-top select {
 header .header-container-bottom {
   padding: 5px 0 10px 0;
 }
-header .header-container-bottom a {
+header .header-container-bottom span a {
   color: #fff;
-  margin-right: 50px;
+  margin-right: 25px;
   font-size: 13px;
 }
-header .header-container-bottom a i {
+header .header-container-bottom span a i {
   color: #989898;
   font-size: 8px;
 }
 header .header-container-bottom .logo {
   font-size: 40px;
   font-family: "PT Sans Narrow", sans-serif;
+}
+
+.jumbotron {
+  background-image: url("../backgrounds/back.jpg");
+  background-size: contain;
+  width: 100%;
+  height: 430px;
+  position: relative;
+}
+.jumbotron-container {
+  width: 1300px;
+  height: 100%;
+  margin: 0 auto;
+}
+.jumbotron-container .box-left, .jumbotron-container .box-right {
+  display: inline-block;
+}
+.jumbotron-container .box-left {
+  width: 300px;
+  left: 500px;
+  position: absolute;
+  top: 50px;
+  color: #333333;
+}
+.jumbotron-container .box-left-title {
+  font-size: 22px;
+  padding-bottom: 5px;
+}
+.jumbotron-container .box-left-title span:first-child {
+  color: #bc54be;
+  font-style: oblique;
+  margin-right: 5px;
+}
+.jumbotron-container .box-left-links {
+  margin-top: 20px;
+}
+.jumbotron-container .box-left-links a {
+  color: #333333;
+  font-size: 14px;
+}
+.jumbotron-container .box-left i {
+  color: #989898;
+  font-size: 10px;
+}
+.jumbotron-container .box-left .download-button {
+  margin-top: 30px;
+  padding: 0 8px;
+  border: 2px solid #333333;
+  font-size: 12px;
+}
+.jumbotron-container .box-left .download-button div {
+  display: inline-block;
+  padding: 5px;
+}
+.jumbotron-container .box-left .download-button-left {
+  text-align: left;
+}
+.jumbotron-container .box-left .download-button-right {
+  margin-left: 10px;
+}
+.jumbotron-container .box-left .download-button-right i {
+  font-size: 20px;
+  color: #333333;
+}
+.jumbotron-container .box-right {
+  width: 350px;
+  height: calc(100% - 40px);
+  position: absolute;
+  top: 40px;
+  right: 270px;
+  background-color: #101010;
+  padding: 40px 0 0 15px;
+  font-size: 10px;
+  color: #989898;
+}
+.jumbotron-container .box-right .price {
+  color: #fff;
+  font-size: 20px;
+  padding-bottom: 5px;
+}
+.jumbotron-container .box-right img {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+}
+.jumbotron-container .box-right .buy-button {
+  background: #009cff;
+  border: none;
+  font-size: 12px;
+  padding: 8px 20px;
+  margin-top: 15px;
+  color: #fff;
+}
+
+.second-navbar {
+  background: #e6e6e6;
+  width: 100%;
+  height: 50px;
+  text-align: center;
+}
+.second-navbar-link {
+  display: inline-block;
+  padding: 15px 10px;
+}
+.second-navbar-link a {
+  color: #333333;
+}
+.second-navbar-link:hover {
+  background: #eeeeee;
 }
