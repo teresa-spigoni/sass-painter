@@ -12,14 +12,24 @@ body {
   font-family: "Roboto", sans-serif;
 }
 
-header {
+.w-100 {
   width: 100%;
+}
+
+.h-100 {
+  height: 100%;
+}
+
+.c-white {
+  color: #fff;
+}
+
+header {
   height: 100px;
   background: #101010;
 }
 header .header-container {
   width: 1000px;
-  height: 100%;
   margin: 0 auto;
 }
 header .header-container-top {
@@ -42,14 +52,17 @@ header .header-container-top select {
 header .header-container-bottom {
   padding: 5px 0 10px 0;
 }
-header .header-container-bottom span a {
-  color: #fff;
+header .header-container-bottom div {
+  display: inline-block;
+}
+header .header-container-bottom div a {
   margin-right: 25px;
   font-size: 13px;
 }
-header .header-container-bottom span a i {
+header .header-container-bottom div a i {
   color: #989898;
   font-size: 8px;
+  margin-left: 4px;
 }
 header .header-container-bottom .logo {
   font-size: 40px;
@@ -59,13 +72,13 @@ header .header-container-bottom .logo {
 .jumbotron {
   background-image: url("../backgrounds/back.jpg");
   background-size: contain;
-  width: 100%;
+  width: 1518px;
   height: 430px;
+  margin: 0 auto;
   position: relative;
 }
 .jumbotron-container {
   width: 1300px;
-  height: 100%;
   margin: 0 auto;
 }
 .jumbotron-container .box-left, .jumbotron-container .box-right {
@@ -130,7 +143,6 @@ header .header-container-bottom .logo {
   color: #989898;
 }
 .jumbotron-container .box-right .price {
-  color: #fff;
   font-size: 20px;
   padding-bottom: 5px;
 }
@@ -145,12 +157,10 @@ header .header-container-bottom .logo {
   font-size: 12px;
   padding: 8px 20px;
   margin-top: 15px;
-  color: #fff;
 }
 
 .second-navbar {
   background: #e6e6e6;
-  width: 100%;
   height: 50px;
   text-align: center;
 }
@@ -165,22 +175,22 @@ header .header-container-bottom .logo {
   background: #eeeeee;
 }
 
-.digital-art {
-  width: 100%;
+.digital-art-top {
   height: 200px;
   background-image: url("../backgrounds/back-2.jpg");
   text-align: center;
   padding-top: 100px;
 }
-.digital-art-content {
+.digital-art-top-content {
   margin: 10px 300px;
 }
-
 .digital-art-video {
-  width: 100%;
+  width: 1500px;
   height: 440px;
+  margin: 0 auto;
   background-image: url("../backgrounds/back-3.jpg");
   background-size: contain;
+  background-repeat: no-repeat;
   position: relative;
 }
 .digital-art-video-button {
@@ -199,12 +209,11 @@ header .header-container-bottom .logo {
   left: 50%;
   transform: translate(-50%, -50%);
   font-size: 50px;
-  color: #dc79c9;
+  color: #bc54be;
 }
 .digital-art-video-button:hover i {
   color: #fff;
 }
-
 .digital-art-bottom {
   display: flex;
   width: 900px;
@@ -222,5 +231,8 @@ header .header-container-bottom .logo {
 }
 .digital-art-bottom-box img {
   width: 160px;
-  margin-bottom: 40px;
+  margin-bottom: 20px;
+}
+.digital-art-bottom-box p {
+  margin-top: 15px;
 }

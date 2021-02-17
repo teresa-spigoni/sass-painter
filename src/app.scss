@@ -1,3 +1,4 @@
+// UTILITY -----------------------------------------------
 *{
   box-sizing: border-box;
   margin: 0;
@@ -8,73 +9,92 @@ a{
   text-decoration: none;
 }
 
-$main-color: #101010;
-$icons-color: #009cff;
+body{
+  font-family: 'Roboto', sans-serif;
+}
+
+.w-100{
+  width: 100%;
+}
+
+.h-100{
+  height: 100%;
+}
+
+// backgrounds
+$jumbotron-back: "../backgrounds/back.jpg";
+$digital-art-back: "../backgrounds/back-2.jpg";
+$digital-art-video-back: "../backgrounds/back-3.jpg";
+$digital-art-bottom-back: "../backgrounds/back-4.png";
+
+// colors
+$main-dark-color: #101010;
+$main-light-color: #989898;
+$main-medium-color: #333333;
+$icons-button-color: #009cff;
+$secondary-color: #bc54be;
+.c-white{
+  color: #fff;
+}
+
+// mixins
 @mixin center {
   position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
 }
+// -------------------------------------------------------
 
-body{
-  font-family: 'Roboto', sans-serif;
-}
-
+// HEADER ------------------------------------------------
 header{
-
-  width: 100%;
   height: 100px;
-  background: $main-color;
+  background: $main-dark-color;
 
   .header-container{
-
     width: 1000px;
-    height: 100%;
     margin: 0 auto;
 
+    // header top --------------------------------
     &-top{
-
       text-align: right;
       padding: 10px;
 
       a{
-        color: #989898;
+        color: $main-light-color;
         padding: 0 10px;
         font-size: 10px;
 
         i{
-          color: $icons-color;
+          color: $icons-button-color;
           margin-right: 3px;
           font-size: 12px;
         }
-
       }
 
       select{
         font-size: 12px;
       }
-
     }
+    // header top --------------------------------
 
+    // header bottom -----------------------------
     &-bottom{
-
       padding: 5px 0 10px 0;
 
-      span{
+      div{
+        display: inline-block;
 
         a{
-          color: #fff;
           margin-right: 25px;
           font-size: 13px;
 
           i{
-            color: #989898;
+            color: $main-light-color;
             font-size: 8px;
+            margin-left: 4px;
           }
-
         }
-
       }
 
       .logo{
@@ -82,23 +102,22 @@ header{
         font-family: 'PT Sans Narrow', sans-serif;
       }
     }
-
+    // header bottom -----------------------------
   }
-
 }
+// -------------------------------------------------------
 
+// JUMBOTRON ---------------------------------------------
 .jumbotron{
-
-  background-image: url("../backgrounds/back.jpg");
+  background-image: url($jumbotron-back);
   background-size: contain;
-  width: 100%;
+  width: 1518px;
   height: 430px;
+  margin: 0 auto;
   position: relative;
 
   &-container{
-
     width: 1300px;
-    height: 100%;
     margin: 0 auto;
 
     .box-left, .box-right{
@@ -106,20 +125,18 @@ header{
     }
 
     .box-left{
-
       width: 300px;
       left: 500px;
       position: absolute;
       top: 50px;
-      color: #333333;
+      color: $main-medium-color;
 
       &-title{
-
         font-size: 22px;
         padding-bottom: 5px;
 
         span:first-child{
-          color: #bc54be;
+          color: $secondary-color;
           font-style: oblique;
           margin-right: 5px;
         }
@@ -127,26 +144,24 @@ header{
       }
 
       &-links{
-
         margin-top: 20px;
 
         a{
-          color: #333333;
+          color: $main-medium-color;
           font-size: 14px;
         }
 
       }
 
       i{
-        color: #989898;
+        color: $main-light-color;
         font-size: 10px;
       }
 
       .download-button{
-
         margin-top: 30px;
         padding: 0 8px;
-        border: 2px solid #333333;
+        border: 2px solid $main-medium-color;
         font-size: 12px;
 
         div{
@@ -159,33 +174,28 @@ header{
         }
 
         &-right{
-
           margin-left: 10px;
 
           i{
             font-size: 20px;
-            color: #333333;
+            color: $main-medium-color;
           }
         }
-
       }
-
     }
 
     .box-right{
-
       width: 350px;
       height: calc(100% - 40px);
       position: absolute;
       top: 40px;
       right: 270px;
-      background-color: $main-color;
+      background-color: $main-dark-color;
       padding: 40px 0 0 15px;
       font-size: 10px;
-      color: #989898;
+      color: $main-light-color;
 
       .price{
-        color: #fff;
         font-size: 20px;
         padding-bottom: 5px;
       }
@@ -197,24 +207,20 @@ header{
       }
 
       .buy-button{
-        background: $icons-color;
+        background: $icons-button-color;
         border: none;
         font-size: 12px;
         padding: 8px 20px;
         margin-top: 15px;
-        color: #fff;
       }
-
     }
-
   }
-
 }
+// -------------------------------------------------------
 
+// SECOND NAV --------------------------------------------
 .second-navbar{
-
   background: #e6e6e6;
-  width: 100%;
   height: 50px;
   text-align: center;
 
@@ -223,7 +229,7 @@ header{
     padding: 15px 10px;
 
     a{
-      color: #333333;
+      color: $main-medium-color;
     }
 
   }
@@ -231,97 +237,76 @@ header{
   &-link:hover{
     background: #eeeeee;
   }
-
 }
+// -------------------------------------------------------
 
+// DIGITAL ART -------------------------------------------
 .digital-art{
 
-  width: 100%;
-  height: 200px;
-  background-image: url("../backgrounds/back-2.jpg");
-  text-align: center;
-  padding-top: 100px;
-
-  &-content{
-    margin: 10px 300px;
-  }
-
-}
-
-.digital-art-video{
-
-  width: 100%;
-  height: 440px;
-  background-image: url("../backgrounds/back-3.jpg");
-  background-size: contain;
-  position: relative;
-
-  &-button{
-
-    @include center;
-    width: 150px;
-    height: 150px;
-    border-radius: 50%;
-    background: rgba(0, 0, 0, 0.5);
-
-    i{
-      @include center;
-      font-size: 50px;
-      color: #dc79c9;
-    }
-
-    &:hover i{
-      color: #fff;
-    }
-
-  }
-
-}
-
-.digital-art-bottom{
-
-  display: flex;
-  width: 900px;
-  margin: 0 auto;
-  padding-bottom: 20px;
-  background-image: url("../backgrounds/back-4.png");
-  background-repeat: no-repeat;
-  background-size: contain;
-
-  &-box{
-
+  &-top{
+    height: 200px;
+    background-image: url($digital-art-back);
     text-align: center;
-    width: 297px;
-    margin-top: 50px;
-    padding: 0 20px;
+    padding-top: 100px;
 
-    img{
-      width: 160px;
-      margin-bottom: 40px;
+    &-content{
+      margin: 10px 300px;
     }
 
   }
 
+  &-video{
+    width: 1500px;
+    height: 440px;
+    margin: 0 auto;
+    background-image: url($digital-art-video-back);
+    background-size: contain;
+    background-repeat: no-repeat;
+    position: relative;
+
+    &-button{
+      @include center;
+      width: 150px;
+      height: 150px;
+      border-radius: 50%;
+      background: rgba(0, 0, 0, 0.5);
+
+      i{
+        @include center;
+        font-size: 50px;
+        color: $secondary-color;
+      }
+
+      &:hover i{
+        color: #fff;
+      }
+    }
+  }
+
+  &-bottom{
+    display: flex;
+    width: 900px;
+    margin: 0 auto;
+    padding-bottom: 20px;
+    background-image: url($digital-art-bottom-back);
+    background-repeat: no-repeat;
+    background-size: contain;
+
+    &-box{
+      text-align: center;
+      width: 297px;
+      margin-top: 50px;
+      padding: 0 20px;
+
+      img{
+        width: 160px;
+        margin-bottom: 20px;
+      }
+
+      p{
+        margin-top: 15px;
+      }
+    }
+  }
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-//
+// -------------------------------------------------------
